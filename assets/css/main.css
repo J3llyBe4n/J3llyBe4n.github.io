@@ -2526,10 +2526,15 @@ input, select, textarea {
     }
 
     .mysql-image {
-        width: 50%;
+        width: 40%;
         height: auto;
+        padding-top : 50px;
     }
 
+    .spark-image {
+        width: 45%;
+        height: auto;
+    }
 	.image {
 		border-radius: 4px;
 		border: 0;

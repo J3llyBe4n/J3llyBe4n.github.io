@@ -2509,8 +2509,19 @@ input, select, textarea {
 
 /* Image */
 
-    .col-4 img {
-        max-width: 15%;
+    .python-image {
+        max-width: 35%;
+        height: auto;
+    }
+
+    .airflow-image {
+        max-width: 25%;
+        height: auto;
+        padding-top: 15px;
+    }
+    
+    .fastapi-image {
+        width: 28%;
         height: auto;
     }
 

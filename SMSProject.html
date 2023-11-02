@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>[Projects] 슬기로운 문화생활 (S.M.S)</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+            <!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">Yoda's Page</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+				            <li>
+                                <a href="baseProject.html">Projects</a>
+                                <ul>
+                                    <li><a href="scoutProject.html">[축구데이터] I'm scouter</a></li>
+                                    <li><a href="#">[금융 지표] gazuaa</a></li>
+                                    <li><a href = "SMSProject.html">[영화 & 공연정보] 슬기로운 문화생활</a></li>
+                                </ul>
+                            </li>
+                            <li><a href ="Columns.html">Columns</a></li>
+                            <li> <a href="techSet.html">Stacks</a></li>
+						</ul>
+					</nav>
+				</header>
+            
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>슬기로운 문화생활</h2>
+							<p>영화 & 공연 정보전달 통합 플랫폼</p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<h3>프로젝트 소개</h3>
+                                <h4>Problem</h4>
+                                문화생활 카테고리에서 많은 부분을 차지하는 영화 & 공연 컨텐츠 수가 증가함에 따라 현명한 소비가 불가능하였다.<br> 
+                                IMDB,네이버 등 산개되어져있는 정보를 한군데 모아, 정보를 한눈에 볼 수 있는 서비스가 필요했다.<br><br>
+
+                                <h4>Thinking</h4>
+                                국내 공연 및 전세계 영화 및 영화 관계인 정보를 한눈에 볼 수 있는 정보 백과사전 웹 서비스 및 데이터를 통한 새로운 BI 대시보드 구현<br><br>
+                                - 각종 서비스 통합<br>
+                                - 영화 & 공연 데이터를 기반으로한 다양한 BI 의 부재<br><br>
+
+                                <h4>Solution</h4>
+                                API, Crawling을 통하여, IMDB, TMDB, KOBIS 등 산개되어있는 데이터를 통합하여, 해당 문화생활에 각종 정보를 전달하는 통합 대시보드 구축<br><br>
+                                <서비스 데이터><br>
+                                - 700,000+ 이상 70년+ 영화 정보 <br>
+                                - 영화관계인 4,000,000 + 명<br>
+                                - 실시간 박스오피스 통계 5년 <br>
+                                - 공연 60,000+ 편 <br>
+                                - 60년+ 국제 영화제 수상 통계<br>
+                                    
+                                <br><br>
+                                <주요기능><br>
+                                - 영화 & 영화관계인 & 공연 정보검색<br>
+                                - 공연 예매 중계<br>
+                                - 데이터를 기반으로한 다양한 BI 제공 <br>
+                                - 티켓파워가 아닌, 전체 박스오피스 순위 <br>
+                                
+                                <br>
+                                    
+								<h3>개발 과정</h3>
+								<h4> GitHUB : <a href = "https://github.com/oppenheimer-joa">바로가기👀</a></h4>
+                                <h4> 도전과제 </h4>
+                                    <li>제한 시간내에 벌크 데이터 처리</li>
+                                    <li>고정 IP가 할당하지 못하는 서버와 네트워크 통신</li>
+                                    <li>AWS Redshift 사용 불가에 따른 무료 DW 구축</li><br><br>
+                                <h4> 해결방안</h4>
+                                    
+                                <br><br>
+                                <h3>기술 스택</h3>
+                                <img src="images/scouter.png" alt="" />
+                                <br><br>
+                                <h3>결과물</h3>
+                                
+                                    
+                                <br><br>
+                                <h3>인사이트</h3>
+                                <h4>배운점</h4>
+                                    - 협업 및 커뮤니케이션을 위한 효과적 장치 도입(칸반, Git)<br>
+                                    - 제한된 리소스 내에 요구사항 수립 및 시행<br><br>
+                                코드를 작성하여, 파이프라인을 만드는 것 뿐만 아니라, 해당 데이터의 성격 & 처리방식에 따라, 파이프라인 아키텍쳐를 고민해야한다는 점을 알게되었습니다. 6명의 팀원과 함께 프로젝트를 진행하기위해, 칸반을 도입하여, 매일 칸반미팅을 진행하였으며, 오픈소스(Airflow Git)을 참고하여, 코드리뷰, 스테이징, 문서, 이슈, 프로젝트 등 프로젝트의 모든 부분을 Git을 적극적으로 활용하였습니다.<br><br>
+                                <h4> 아쉬운점 </h4>
+                                    - 처리된 데이터 DW redshift 사용불가<br>
+                                    기존에 DW로 사용하기로 하였던, AWS Redshift를 비용제한상 사용하지 못하였습니다. 따라서, 처리된 데이터를 OLTP 형태로 적재하였으나, 추후, OLAP 구조 또한 사용해보고싶습니다.<br><br>
+                                    
+                                    - 컨텐츠 제작자 전용 BI 구축<br>
+                                    SMS 프로젝트에 구축된 BI는 문화생활을 소비하는자에 국한된 BI 입니다.컨텐츠 배급사, 제작사에게 월별, 시즌별  경쟁영화 없이 해당 컨텐츠의 수익 극대화, 세부 장르 군집화를 통한 새로운 트렌드 장르(예시 : 90년대 한국나들이)를 제공하고싶습니다.<br><br>
+                                    
+                                    - 데이터매시 구축에 따른 위치 기반 서비스<br>
+                                    슬기로운 문화생활 프로젝트 데이터는 중앙 집권식 처리 방식을 고수하고있습니다. 따라서, 공연, 영화와 같은 카테고리가 다른 데이터들을 분산 운영 처리 할 수 있는 데이터 매시 방식을 채택하여, 데이터 품질 관리개선을 하고 싶으며, 나아가, 문화생활 장소 GPS 데이터를 기반으로한, 문화 나들이 코스 제안과 같은 통합 서비스를 구현해보고싶습니다.
+                                    
+                            <br><br>
+                            기획서 :<br>
+                            프로젝트 발표자료 : <br>
+							</section>
+
+					</div>
+				</div>
+
+            <!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/J3llyBe4n" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>

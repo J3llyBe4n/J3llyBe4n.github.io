@@ -84,12 +84,14 @@
                                 <div style="text-align : center;">
                                      <img src="images/scouter.png" width="700">
                                 </div>
+                                    
                                 <h5>집중 기술 스택</h5>
                                 <img src ="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white">
                                 <img src = "https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white">
                                 <img src = "https://img.shields.io/badge/MYSQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
                                 <img src = "https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=Linux&logoColor=black">
                                 <img src = "https://img.shields.io/badge/GCE-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white"><br><br>
+                                
                                 
 								<h3>개발 과정</h3>
 								GITHUB : <a href="https://github.com/IamScout">Github로 이동합니다</a><br><br>
@@ -100,12 +102,13 @@
                                     <h5><li>다양한 에러에 따른 데이터 수집 불가</li></h5><br>
                                     <ul>유료 API를 통해 데이터를 수집하는 중 예기치 않은 에러로 데이터 적재에 문제가 발생하고, 데이터 유실로 이어지는 상황이 발생했습니다.<br>
                                     
-                                    유료 API를 통해 제공받는 축구 경기 결과 데이터는 데이터 수집 전 경기 일정 변동점을 체크할 수 있는 분기 로직을 추가로 구현하였으며, 적재 되는 데이터 형태를 일원화 하기위해 데이터를 임시 적재 후 해당 데이터의 Key 값을 통일화하는 백오피스 구현을 통해 대시보드 구현시 동일한 Key 값으로 데이터를 사용 할 수 있게 개발하였습니다.<br>
-                                    따라서, 월 100회 이상 발생하는 적재 중 오류 빈도를 월 10회 이하로 약 90% 줄였습니다.
+                                    제공받는 축구 경기 결과 데이터는 데이터 수집 전 경기 일정 변동점을 체크할 수 있는 분기 로직을 추가로 구현하였으며, 적재 되는 데이터 형태를 일원화 하기위해 데이터를 임시 적재 후 해당 데이터의 Key 값을 통일화하는 백오피스 구현을 통해 대시보드 구현시 동일한 Key 값으로 데이터를 사용 할 수 있게 개발하였습니다.<br>
+                                    이러한 로직 구현으로 월 100회 이상 발생하는 적재 중 오류 빈도를 월 10회 이하로 약 90% 줄였습니다.
                                     </ul>
                                     
                                     <h5><li>증가한 배치 스케쥴러에 따른 관리 효율성 저하</li></h5><br>
-                                    <ul>기존 데이터 수집은 python script로 기능을 구현하여 수집 서버 cronjob 등록을 통해 데이터를 저장하였습니다.</ul>
+                                    <ul>기존 데이터 수집은 python script로 기능을 구현하여 수집 서버 cronjob 등록을 통해 데이터를 저장하였으며 필요한 데이터를 모두 얻기 위해서 일 500건 이상의 유료 API 호출이 필요했습니다. 따라서 필요한 endPoint별로 그룹화하여 16개의 Cronjob으로 운영하였습니다. 하지만 그룹화 되어있는 endPoint의 에러 발생시 특정 호출이 문제가 발생하는지 확인할 수 없었고, 다시 재실행하는 입력기반의 스크립트를 추가로 운영하는 등 비효율적이였습니다.<br>
+                                    이에 글로벌 환경 데이터 수집 과정에 다양한 오류에 유연하게 대처하기위해 멱등성을 보장하는 Airflow를 도입하였습니다.</ul>
                                     
                                     <h5><li>Airflow 자원부족 & 수집 파이프라인의 불안정</li><br></h5> 
                                     <ul>Airflow에 비즈니스 로직을 배포하였는데, 특정 데이터 파이프라인 부하로 인해 모든 수집 파이프라인이 멈추는 상황이 발생했습니다.<br>

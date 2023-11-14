@@ -11,6 +11,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto; 
+        }
+        </style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -40,73 +51,120 @@
 					<div class="container">
 						<header class="major">
 							<h2>슬기로운 문화생활</h2>
-							<p>영화 & 공연 정보전달 통합 플랫폼</p>
+							<p>영화 & 공연 정보 통합 플랫폼</p>
 						</header>
 
 						<!-- Content -->
 							<section id="content">
 								<h3>프로젝트 소개</h3>
                                 <h4>Problem</h4>
-                                문화생활 카테고리에서 많은 부분을 차지하는 영화 & 공연 컨텐츠 수가 증가함에 따라 현명한 소비가 불가능하였다.<br> 
-                                IMDB,네이버 등 산개되어져있는 정보를 한군데 모아, 정보를 한눈에 볼 수 있는 서비스가 필요했다.<br><br>
-
-                                <h4>Thinking</h4>
-                                국내 공연 및 전세계 영화 및 영화 관계인 정보를 한눈에 볼 수 있는 정보 백과사전 웹 서비스 및 데이터를 통한 새로운 BI 대시보드 구현<br><br>
-                                - 각종 서비스 통합<br>
+                                문화생활 카테고리에서 많은 부분을 차지하는 영화 & 공연 컨텐츠 수가 증가함에 따라 현명한 소비가 불가능했습니다.<br> 
+                                IMDB,네이버 등 산개되어져있는 정보를 모아 보다 현명한 컨텐츠 소비를 할 수 있게 돕는 서비스가 필요했습니다.<br>
+                                국내 공연 및 전세계 영화 및 영화 관계인 정보를 한눈에 볼 수 있는 정보 백과사전 웹 서비스 및 데이터를 통한 새로운 BI 대시보드 구현에 목적을 두었습니다.<br><br>
+                                - 각종 서비스(인터파크, watachpedia, 대형포탈 영화 검색) 통합<br>
                                 - 영화 & 공연 데이터를 기반으로한 다양한 BI 의 부재<br><br>
 
                                 <h4>Solution</h4>
-                                API, Crawling을 통하여, IMDB, TMDB, KOBIS 등 산개되어있는 데이터를 통합하여, 해당 문화생활에 각종 정보를 전달하는 통합 대시보드 구축<br><br>
-                                <서비스 데이터><br>
+                                API, Crawling을 통하여, IMDB, TMDB, KOBIS 등 산개되어있는 데이터를 통합하여, 해당 문화생활에 전반적인 정보 통합 대시보드 구축<br><br>
+                                <h5>서비스 데이터</h5>
                                 - 700,000+ 이상 70년+ 영화 정보 <br>
                                 - 영화관계인 4,000,000 + 명<br>
                                 - 실시간 박스오피스 통계 5년 <br>
                                 - 공연 60,000+ 편 <br>
                                 - 60년+ 국제 영화제 수상 통계<br>
                                     
-                                <br><br>
-                                <주요기능><br>
-                                - 영화 & 영화관계인 & 공연 정보검색<br>
-                                - 공연 예매 중계<br>
-                                - 데이터를 기반으로한 다양한 BI 제공 <br>
-                                - 티켓파워가 아닌, 전체 박스오피스 순위 <br>
-                                
                                 <br>
-                                    
-								<h3>개발 과정</h3>
-								<h4> GitHUB : <a href = "https://github.com/oppenheimer-joa">바로가기👀</a></h4>
-                                <h4> 도전과제 </h4>
-                                    <li>제한 시간내에 벌크 데이터 처리</li>
-                                    <li>고정 IP가 할당하지 못하는 서버와 네트워크 통신</li>
-                                    <li>AWS Redshift 사용 불가에 따른 무료 DW 구축</li><br><br>
-                                <h4> 해결방안</h4>
-                                    
+                                <h5>주요기능</h5>
+                                - 영화 & 영화관계인 & 공연 정보검색<br>
+                                - 공연 예매 링크 통합 중계<br>
+                                - 데이터를 기반으로한 다양한 BI 제공 <br>
+                                - 티켓파워가 아닌, 전체 박스오피스 순위 및 지표통계 <br>
+                                
                                 <br><br>
-                                <h3>기술 스택</h3>
-                                <img src="images/scouter.png" alt="" />
+                                
+                                <h3>프로젝트 아키텍처 & 기술스택</h3>
+                                <div style="text-align : center;">
+                                     <img src="images/sms.png" width="700">
+                                </div>
+                                    
+                                <h5>집중 기술 스택</h5>
+                                <img src ="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white">
+                                <img src = "https://img.shields.io/badge/apache%20spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white">
+                                <img src = "https://img.shields.io/badge/S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white">
+                                <img src = "https://img.shields.io/badge/AWS%20EC2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white">
+                                <img src ="https://img.shields.io/badge/OpenVPn-EA7E20?style=for-the-badge&logo=openvpn&logoColor=white">
+                                <br><br>
+
+                                <h3>개발 과정</h3>
+								GITHUB : <a href="https://github.com/oppenheimer-joa">Github로 이동합니다</a><br>
+                                팀원 : 6명<br>
+                                역할 : [PM] 시스템 아키텍처 & 데이터 전처리<br><br>
+                                <div class="image-container">
+                                        <img src="images/sms_etc01.png" width="500">
+                                        <img src="images/sms_etc02.png" width="500">
+
+                                </div><br><br>
+                                
+                                <h5>도전과제</h5>
+                                    <h5><li>팀원과 원할한 커뮤니케이션</li></h5><br>
+                                    <ul>팀원과 긴밀한 커뮤니케이션이 프로젝트의 성공을 결정 한다생각합니다.<br>
+                                        교육 기간 특성상 처음 협업하는 팀원들과 한정된 3주 시간 내에 프로젝트를 완료했고 각자 다른 역할을 맡아 개발과 동시에 긴밀한 커뮤니케이션을 하기 위해, 일일 칸반 및 코드 리뷰 등 다른 업무에 대한 이해도를 높이는 장치를 도입했습니다.</ul>
+                                    
+                                    <h5><li>제한 시간내 벌크 데이터 처리</li></h5><br>
+                                    <ul>40GB 용량의 6백만 개 텍스트 데이터를 10일 내외로 전처리 하는 것이 문제였습니다.<br>
+                                    Cloud 환경에 구축한 스파크 서버를 onPremise 스파크 서버로 전환해(전환기 : <a href="https://charm-step-e68.notion.site/Tech-Blog-onPremise-Spark-f0d9c51bb1704a5393c84a3c5a4f1f83?pvs=4">보러가기</a>) 기존 서버 대비 약 5배 이상 성능을 향상하고 원천 데이터 파티셔닝 재정의를 통해 File I/O를 최소화하였습니다.<br>
+                                    소모되는 리소스양을 기반으로 한 스레드 병렬처리, 이터레이션 구간 데이터 최소화, 캐싱 등 다양한 기법을 직접 A/B테스트하며 (Spark 리팩토링 : <a href="https://charm-step-e68.notion.site/Tech-Blog-Spark-RDDs-a553821111c34fd8962df4058aed5a46?pvs=4">보러가기</a>) 기존 코드 대비 약 70% 이상 처리 속도를 개선해 기간 내 벌크 데이터 처리를 할 수 있었습니다. 
+                                    </ul>
+                                    
+                                    <h5><li>고정IP가 할당되지 않는 서버와 네트워크 그룹화</li></h5><br>
+                                    <ul>onPremise 스파크 서버 환경 특성상 고정 IP를 할당할 수 없었고 해당 도전과제의 가장 큰 요구사항은 이미 완성된 시스템은 수정하지 않는 것이였습니다.<br>
+                                    Airflow가 스파크 서버와 통신하기 위해, VPN을 활용한 그룹화된 네트워크로 구현했습니다. 또한, VPN ON/OFF 스위치 Operator를 구현하여, 유연하게 네트워크 그룹을 변경(개발기 : <a href="https://charm-step-e68.notion.site/Tech-Blog-OpenVPN-Operator-f2c2033163264bedb4726c34edd2997d?pvs=4">보러가기</a>) 할 수 있었습니다. 비정상 동작을 방지하고자 IP 확인 후 오류를 대처할 수 있는 분기 플래그 생성 및 시스템 서비스 재시도 등을 통해 변경되는 네트워크에 안정성을 부여했습니다.</ul>
+                                    
+                                    <h5><li>무료 Warehouse 구축</li><br></h5> 
+                                    <ul>비용 제한으로 인해 AWS RedShift에 직접 데이터를 적재할 수 없는 상황에서, 처리가 완료된 데이터를 Parquet 형태로 임시 보관 후 DuckDB 엔진을 활용하여 MySQL 메타스토어에 데이터를 적재함으로써 RedShift대비 저렴한 비용으로 Warehouse를 구축하여 문제를 해결했습니다.</ul>
+                                    
                                 <br><br>
                                 <h3>결과물</h3>
+                                <h5> 웹서비스 사진</h5>
+                                <div class="image-container02">
+                                        <img src="images/sms01.png" width="350">
+                                        <img src="images/sms02.png" width="350">
+                                        <img src="images/sms03.png" width="350">
+                                        <img src="images/sms04.png" width="350">
+                                        <img src="images/sms05.png" width="350">
+                                        <img src="images/sms06.png" width="350">
+                                </div><br><br>
+                                <h5>내부 BI 대시보드 사진</h5>
+                                <div class="image-container02">
+                                    <img src ="images/sms07.png" width="350">
+                                    <img src ="images/sms08.png", width="350">
+                                    <img src ="images/sms09.png" width="350">
+                                    <img src ="images/sms10.png" width="350">
+                                    <img src ="images/sms11.png" width="350">
+                                    <img src ="images/sms12.png" width="350">
+                                </div>
                                 
                                     
                                 <br><br>
                                 <h3>인사이트</h3>
                                 <h4>배운점</h4>
-                                    - 협업 및 커뮤니케이션을 위한 효과적 장치 도입(칸반, Git)<br>
-                                    - 제한된 리소스 내에 요구사항 수립 및 시행<br><br>
-                                코드를 작성하여, 파이프라인을 만드는 것 뿐만 아니라, 해당 데이터의 성격 & 처리방식에 따라, 파이프라인 아키텍쳐를 고민해야한다는 점을 알게되었습니다. 6명의 팀원과 함께 프로젝트를 진행하기위해, 칸반을 도입하여, 매일 칸반미팅을 진행하였으며, 오픈소스(Airflow Git)을 참고하여, 코드리뷰, 스테이징, 문서, 이슈, 프로젝트 등 프로젝트의 모든 부분을 Git을 적극적으로 활용하였습니다.<br><br>
+                                    - 프로젝트의 전반적 이해 & 프로젝트 성공을 위한 커뮤니케이션 능력<br>
+                                    - 목표에 적합한 요구사항 수립 및 개발<br><br>
+                                6명의 팀원과 함께 프로젝트를 진행하기위해, 칸반을 도입하여, 매일 칸반미팅을 진행하였으며, 오픈소스(Airflow Git)를 참고하여, 코드리뷰, 문서화, 이슈, 프로젝트 등 프로젝트 진행방식의 모든부분에 이해하게되었으며, SMS프로젝트도 Git을 적극적으로 활용하였습니다.<br>
+                                전 프로젝트 (<a href ="scoutProject.html">I'm Scouter</a>)의 아쉬운점인 세분화된 스테이징을 하지 못한 점을 개선하기위해 개발 - 테스트 - 배포 별 서버를 구축하여 스테이징을 할 수 있었습니다.<br>
+                                마지막으로, 코드를 작성해 파이프라인을 만드는 것 뿐만 아니라, 해당 데이터의 성격 & 처리방식에 따라, 파이프라인 아키텍쳐를 고민해야한다는 점을 알게되었습니다. 프로젝트 진행중 생기는 어려운 점을 두려워하지 않고 요구사항을 빠르게 수립하고 유연한 개발을 함으로써 제한된 리소스내에 빠르게 개발하여 문제해결하는 방법에 대한 자신감이 생겼습니다. <br><br><br>   
+                            
                                 <h4> 아쉬운점 </h4>
-                                    - 처리된 데이터 DW redshift 사용불가<br>
-                                    기존에 DW로 사용하기로 하였던, AWS Redshift를 비용제한상 사용하지 못하였습니다. 따라서, 처리된 데이터를 OLTP 형태로 적재하였으나, 추후, OLAP 구조 또한 사용해보고싶습니다.<br><br>
                                     
                                     - 컨텐츠 제작자 전용 BI 구축<br>
                                     SMS 프로젝트에 구축된 BI는 문화생활을 소비하는자에 국한된 BI 입니다.컨텐츠 배급사, 제작사에게 월별, 시즌별  경쟁영화 없이 해당 컨텐츠의 수익 극대화, 세부 장르 군집화를 통한 새로운 트렌드 장르(예시 : 90년대 한국나들이)를 제공하고싶습니다.<br><br>
                                     
-                                    - 데이터매시 구축에 따른 위치 기반 서비스<br>
-                                    슬기로운 문화생활 프로젝트 데이터는 중앙 집권식 처리 방식을 고수하고있습니다. 따라서, 공연, 영화와 같은 카테고리가 다른 데이터들을 분산 운영 처리 할 수 있는 데이터 매시 방식을 채택하여, 데이터 품질 관리개선을 하고 싶으며, 나아가, 문화생활 장소 GPS 데이터를 기반으로한, 문화 나들이 코스 제안과 같은 통합 서비스를 구현해보고싶습니다.
+                                    - 데이터 관리방식의 변환<br>
+                                    슬기로운 문화생활 프로젝트 데이터는 중앙 집권 처리방식을 고수하고있습니다. 따라서 도메인별 데이터가 분리되지 않는 중앙 집중형 데이터 관리 방식을 파이프라인 아키텍처 플랫폼화를 통해 공연과 영화 데이터 파이프라인을 분리하여 데이터 매시를 구축해 각 도메인에서 주체적으로 관리하고 나아가 고품질 데이터 파이프라인을 만들고 싶습니다.
                                     
                             <br><br>
-                            기획서 :다운로드<br>
-                            프로젝트 발표자료 :다운로드 <br>
+                            프로젝트 기획서 : <a href="https://drive.google.com/file/d/1HQN1QfjD-ZhYRkwrT-2hCCXSVLyI1OeS/view?usp=share_link">다운로드</a><br>
+                            운영 & 개발 PPT : <a href="https://drive.google.com/file/d/1eBD9churxL2jY0qrKSchHPfNJ3U0Z8Sc/view?usp=sharing">다운로드</a><br>
 							</section>
 
 					</div>

@@ -2535,6 +2535,78 @@ input, select, textarea {
         width: 45%;
         height: auto;
     }
+
+    .dbt-image {
+        width: 30%;
+        height: auto;
+    }
+
+    .sql-image {
+        width: 30%;
+        height: auto;
+    }
+
+    .iceberg-image {
+        width: 35%;
+        height: auto;
+    }
+
+    /* Column Tags */
+    .column-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+    .column-tag {
+        display: inline-block;
+        padding: 6px 16px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        background: transparent;
+        color: #666;
+        font-size: 0.85em;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .column-tag:hover {
+        border-color: #666;
+        color: #333;
+    }
+    .column-tag.active {
+        background: #333;
+        color: #fff;
+        border-color: #333;
+    }
+
+    /* Column Pagination */
+    .column-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 24px;
+    }
+    .page-btn {
+        width: 36px;
+        height: 36px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        background: transparent;
+        color: #666;
+        font-size: 0.85em;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .page-btn:hover {
+        border-color: #666;
+        color: #333;
+    }
+    .page-btn.active {
+        background: #333;
+        color: #fff;
+        border-color: #333;
+    }
+
 	.image {
 		border-radius: 4px;
 		border: 0;
